@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TodoController!{% endblock %}
+
+{% block body %}
+
+{{ form_start(myForm) }}
+<div class="form-controller">
+    {{ form_rest(myForm) }}
+    <button type="submit">Valider</button>
+</div>
+{{ form_end(myForm) }}
+
+<div class="todo-list">
+{% for todo in todos %}
+    {{ todo.content }}  
+    <br>  
+{% endfor %}
+</div>
+
+{% endblock %}
